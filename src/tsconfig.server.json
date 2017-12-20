@@ -3,16 +3,15 @@
   "compilerOptions": {
     "outDir": "../out-tsc/app",
     "baseUrl": "./",
-    "module": "es2015",
+    "module": "commonjs",
     "types": []
-  },
-  "angularCompilerOptions": {
-    "preserveWhitespaces": false,
-    "entryModule": "app/app.module#AppModule"
   },
   "exclude": [
     "test.ts",
     "**/*.spec.ts",
     "server.ts"
-  ]
+  ],
+  "angularCompilerOptions": {
+    "entryModule": "app/app.server.module#AppServerModule"
+  }
 }

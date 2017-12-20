@@ -1,0 +1,29 @@
+<div class="container">
+    <div class="MusicHeader">
+            <img src="../../assets/IMAGES/header_bg.jpg" width="760px" />                
+    </div>
+    <div>
+            <img  class="MusicLogo" src="../../assets/IMAGES/MusicPlay_logo.png" />
+    </div>
+    
+    <img src="../../assets/IMAGES/PlayingVideoBgd.jpg" />
+    <!--
+    <div class="musicPlayBck">
+        <img src="../../assets/IMAGES/MusicPlay.jpg" width="760px" height="52px" />    
+    </div>
+-->     
+    <div class="video-title"> 
+        {{ vidTitle }} 
+        <br/>
+        <span class="dmy">published on {{ vidPubDate | date: 'MMM dd, yyyy' }}</span>
+        <div placeholder="" class="descn"  readonly>
+            {{ vidDescn }}         
+        </div>                  
+        <a class="backToList" [routerLink]="['/youtube-videos']">
+          <img src="../../assets/IMAGES/back_arrow.png">&nbsp;&nbsp;&nbsp;Back to List
+        </a>
+    </div>
+    <iframe class="actualVideo" id="dynFrame" src="https://www.youtube.com/embed/X0qwQqwKLlM">
+    </iframe> 
+  </div>
+  <router-outlet></router-outlet>   

@@ -1,0 +1,38 @@
+<p>
+  you-tube works!
+</p>
+
+<div class="container">
+    <img src="../../assets/IMAGES/tallBynd2.jpg" width="760px" height="1000px" />
+    <div class="musicPlay">
+        <img src="../../assets/IMAGES/MusicPlay.jpg" width="760px" height="52px" class="playBtn" />   
+    </div>
+    <a (click)="tstClick()">Test Click</a>
+    <div class="video">
+        <div *ngFor="let video of videos" class="videoCont">
+            <div class="video-title"> 
+                  {{ video.snippet.title }} 
+                  {{ video.snippet.resourceId.videoId }}
+            </div>
+            <a [routerLink]="['/video-detail', video.snippet.title, 
+                                video.snippet.publishedAt, 
+                                video.snippet.description, 
+                                video.snippet.resourceId.videoId,
+                                video.snippet.position
+                            ]">
+                  <img src="../../assets/IMAGES/play_button.svg" class="video-play"/>
+            </a> 
+            <div class="dmy">
+                <img src="../../assets/IMAGES/bandDefault3.jpg" style="z-index:10;" width="211px" height="125px" />
+                <br/>
+                published on {{ video.snippet.publishedAt | date: 'MMM dd, yyyy' }} 
+            </div>
+            <div>
+                  <textarea placeholder="" class="txtArea" readonly>
+                        {{ video.snippet.description }}         
+                  </textarea>                  
+            </div>
+        </div> <!-- end of loop -->
+    </div> <!-- end of video -->  
+</div><!-- end of container -->
+<router-outlet></router-outlet>

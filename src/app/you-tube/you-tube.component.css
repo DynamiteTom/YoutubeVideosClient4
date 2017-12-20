@@ -1,0 +1,108 @@
+:host{
+    display: block;
+}
+
+.container{
+    position:absolute;
+    display:flex;
+    flex-direction:column;
+    flex: flex-grow;
+    background-color:cyan;
+    width: 760px;
+    position:relative;
+    margin: auto;
+    justify-content:center;
+}
+
+.musicPlay{
+    position:absolute;
+    top: 10px;
+    
+    z-index:10;
+}
+.video{
+    z-index: 15;
+    display:flex;
+    align-content:space-between;
+    position:absolute;
+    left:44px; 
+    top:0px;
+    height:50px;
+    flex-direction:row;
+    width:720px;
+    flex-flow:row wrap; 
+}
+
+.videoCont{
+    position:ralative;
+    width:228px;
+    top:0px;
+    left:60px;
+    height:235px;       
+}
+
+.dmy{
+    font-size:xx-small;
+    color:gray;
+    width:200px;
+    /* left:-160px;*/
+}
+
+.video-title{
+    color: turquoise;
+    background-color:transparent;
+    font-size:x-small;
+    font-weight:bold;
+    position:relative;
+    top: 150px;
+    height: 50px;
+    left: 7px;
+    width: 150px;
+}
+
+.playBtn{
+    z-index:60;
+    
+}
+
+.video-play{
+    position:relative;
+    top: 120px;
+    width: 25px;
+    height: 25px;
+    left:185px; 
+    z-index:30;
+}
+
+.video-desc{ 
+    z-index: -50;
+    position:relative;
+    top: 0px;
+    left: 0px;
+    width: 200px;
+    font-style:italic;
+    background-color:transparent;
+    border: transparent;
+}
+
+.txtArea{
+    position: relative;
+    font-size:xx-small;
+    left:0px;
+    text-align:left;
+    width:210px;
+    background-color:transparent;
+    border: transparent;
+    display:block;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    color: darkgray;
+    height:80px;
+}
+
+textarea:read-only
+
+.desc-cls{
+    text-align:left;
+
+}
